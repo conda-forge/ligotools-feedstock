@@ -17,7 +17,7 @@ source:
 
 build:
   noarch: generic
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -25,6 +25,8 @@ requirements:
 
 outputs:
   - name: "ligotools-cache"
+    build:
+      noarch: generic
     files:
       - bin/*cache.pl
       - bin/*cache.sh
@@ -53,6 +55,8 @@ outputs:
         - diff out.txt out4.txt  # [unix]
 
   - name: "ligotools-matlab"
+    build:
+      noarch: generic
     files:
       - share/ligotools/matlab
     test:
@@ -60,6 +64,8 @@ outputs:
         - test -f ${PREFIX}/share/ligotools/matlab/getdetector.m  # [unix]
 
   - name: "ligotools-scripts"
+    build:
+      noarch: generic
     files:
       - bin/cleanlatex
       - bin/seg*
@@ -78,6 +84,8 @@ outputs:
         - cat a.txt | segsum  # [unix]
 
   - name: "ligotools-tconvert"
+    build:
+      noarch: generic
     files:
       - bin/tconvert
       - bin/gpsclock
